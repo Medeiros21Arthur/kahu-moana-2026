@@ -239,7 +239,7 @@
                         <i class="fa-solid fa-pen-to-square"></i>
                         <span data-i18n="btn_escolher_plano">Inscrever-se no Formulário</span>
                     </a>
-                </div>
+               </div>
             </div>
         </section>
 
@@ -266,43 +266,34 @@
             <div class="contato-container">
                 <!-- Informações e Canais de Contato -->
                 <div class="contato-info">
-                    <a href="https://instagram.com/kahumoana" target="_blank" rel="noopener noreferrer" class="contato-item">
-                        <div class="contato-item-icon contato-icon-instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
-                        <div>
-                            <h4 data-i18n="info_instagram_title">Instagram</h4>
-                            <p data-i18n="info_instagram_desc">@kahumoana</p>
-                        </div>
-                    </a>
-
-                    <a href="mailto:contato@kahumoana.com" class="contato-item">
-                        <div class="contato-item-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4 data-i18n="info_email_title">E-mail</h4>
-                            <p data-i18n="info_email_desc">contato@kahumoana.com</p>
-                        </div>
-                    </a>
-
-                    <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="contato-item">
+                    <a href="https://api.whatsapp.com/send?phone=351911872833&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20e%20marcar%20uma%20aula%20experimental!" target="_blank" rel="noopener noreferrer" class="contato-item contato-item-whatsapp">
                         <div class="contato-item-icon contato-icon-whatsapp">
                             <i class="fa-brands fa-whatsapp"></i>
                         </div>
-                        <div>
+                        <div class="contato-item-texto">
                             <h4 data-i18n="info_whatsapp_title">WhatsApp</h4>
-                            <p data-i18n="info_whatsapp_desc">+55 (00) 00000-0000</p>
+                            <p data-i18n="info_whatsapp_desc">+351 911 872 833</p>
                         </div>
                     </a>
+
+                    <a href="https://www.instagram.com/kahu_moana_vaa/" target="_blank" rel="noopener noreferrer" class="contato-item">
+                        <div class="contato-item-icon contato-icon-instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="contato-item-texto">
+                            <h4 data-i18n="info_instagram_title">Instagram</h4>
+                            <p data-i18n="info_instagram_desc">@kahu_moana_vaa</p>
+                        </div>
+                    </a>
+
 
                     <div class="contato-item">
                         <div class="contato-item-icon">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
-                        <div>
+                        <div class="contato-item-texto">
                             <h4 data-i18n="info_local_title">Localização</h4>
-                            <p data-i18n="info_local_desc">Setúbal, Portugal - Baía de Setúbal & Arrábida</p>
+                            <p data-i18n="info_local_desc">Praia da Saúde, Av. José Mourinho 122, Setúbal, Portugal</p>
                         </div>
                     </div>
 
@@ -310,49 +301,12 @@
                         <div class="contato-item-icon">
                             <i class="fa-solid fa-clock"></i>
                         </div>
-                        <div>
+                        <div class="contato-item-texto">
                             <h4 data-i18n="info_horario_title">Horário de Atendimento</h4>
                             <p data-i18n="info_horario_desc">Segunda a Domingo (mediante agendamento)</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Formulário de Dúvidas / Mensagem -->
-                <form class="form-contato" id="form-contato">
-                    <div class="form-grupo">
-                        <label for="nome" data-i18n="form_nome_label">Nome Completo</label>
-                        <input type="text" id="nome" data-i18n-placeholder="form_nome_placeholder" placeholder="Digite seu nome completo" required>
-                    </div>
-
-                    <div class="form-grupo">
-                        <label for="email" data-i18n="form_email_label">E-mail de Contato</label>
-                        <input type="email" id="email" data-i18n-placeholder="form_email_placeholder" placeholder="seuemail@exemplo.com" required>
-                    </div>
-
-                    <div class="form-grupo">
-                        <label for="assunto" data-i18n="form_assunto_label">Como deseja participar?</label>
-                        <select id="assunto" required>
-                            <option value="" disabled selected data-i18n="form_opt_placeholder">Selecione uma opção...</option>
-                            <option value="plano_1x">Plano 1x por Semana (40 €/mês)</option>
-                            <option value="plano_2x">Plano 2x por Semana (50 €/mês)</option>
-                            <option value="plano_3x">Plano 3x por Semana (60 €/mês)</option>
-                            <option value="inscricao" data-i18n="form_opt_inscricao">Inscrição no Setúbal Challenge</option>
-                            <option value="aulas" data-i18n="form_opt_mentoria">Aulas de Canoa Va'a (Iniciante / Regular)</option>
-                            <option value="passeios" data-i18n="form_opt_duvida">Passeios Náuticos & Arrábida</option>
-                            <option value="teambuilding" data-i18n="form_opt_outro">Team Building para Empresas / Eventos</option>
-                        </select>
-                    </div>
-
-                    <div class="form-grupo">
-                        <label for="mensagem" data-i18n="form_mensagem_label">Sua Mensagem / Detalhes</label>
-                        <textarea id="mensagem" rows="5" data-i18n-placeholder="form_mensagem_placeholder" placeholder="Conte-nos sobre seu interesse, número de pessoas ou datas preferidas..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-block">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        <span data-i18n="form_btn_enviar">Enviar Mensagem</span>
-                    </button>
-                </form>
             </div>
         </section>
     </main>
@@ -360,15 +314,13 @@
     <footer class="rodape">
         <div class="rodape-container">
             <div class="rodape-sociais">
-                <a href="https://instagram.com/kahumoana" target="_blank" rel="noopener noreferrer" class="btn-social social-instagram" data-i18n-aria="social_instagram_aria" data-i18n-title="info_instagram_title" title="Instagram" aria-label="Instagram">
+                <a href="https://www.instagram.com/kahu_moana_vaa/" target="_blank" rel="noopener noreferrer" class="btn-social social-instagram" data-i18n-aria="social_instagram_aria" data-i18n-title="info_instagram_title" title="Instagram" aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="btn-social social-whatsapp" data-i18n-aria="social_whatsapp_aria" data-i18n-title="info_whatsapp_title" title="WhatsApp" aria-label="WhatsApp">
+                <a href="https://api.whatsapp.com/send?phone=351911872833&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20e%20marcar%20uma%20aula%20experimental!" target="_blank" rel="noopener noreferrer" class="btn-social social-whatsapp" data-i18n-aria="social_whatsapp_aria" data-i18n-title="info_whatsapp_title" title="WhatsApp" aria-label="WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
-                <a href="mailto:contato@kahumoana.com" class="btn-social social-email" data-i18n-aria="social_email_aria" data-i18n-title="info_email_title" title="E-mail" aria-label="E-mail">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
+                
             </div>
             <p data-i18n-html="rodape_texto">&copy; 2026 <span>Kahu Moana</span>. Todos os direitos reservados.</p>
         </div>

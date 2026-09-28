@@ -1006,19 +1006,18 @@ body.has-hero-fullscreen .cabecalho-fixo.rolando {
 }
 
 /* ============================================================
-   Página de Contato & Formulário
+   Página de Contato / Dúvidas & Canais Diretos
    ============================================================ */
 .contato-container {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 36px;
-    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .contato-info {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .contato-item {
@@ -1027,51 +1026,84 @@ body.has-hero-fullscreen .cabecalho-fixo.rolando {
     gap: 16px;
     background-color: var(--color-surface);
     border: 1px solid var(--color-card-border);
-    padding: 20px;
-    border-radius: 16px;
+    padding: 22px 20px;
+    border-radius: 18px;
     transition: var(--transition);
     text-decoration: none;
     color: inherit;
+    position: relative;
+    overflow: hidden;
 }
 
 .contato-item:hover {
-    border-color: rgba(56, 189, 248, 0.3);
-    transform: translateX(4px);
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateY(-4px);
     background-color: var(--color-surface-hover);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.contato-item-whatsapp {
+    border-color: rgba(37, 211, 102, 0.25);
+}
+
+.contato-item-whatsapp:hover {
+    border-color: rgba(37, 211, 102, 0.5);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.15);
 }
 
 .contato-item-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
     background: rgba(56, 189, 248, 0.12);
     color: var(--color-accent);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.contato-icon-whatsapp {
+    background: rgba(37, 211, 102, 0.15);
+    color: #25d366;
+}
+
+.contato-icon-instagram {
+    background: rgba(225, 48, 108, 0.15);
+    color: #e1306c;
+}
+
+.contato-item-texto {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
 }
 
 .contato-item h4 {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
+    color: var(--color-text);
 }
 
 .contato-item p {
     color: var(--color-text-muted);
     font-size: 0.92rem;
+    word-break: break-word;
 }
 
 .contato-item:hover .contato-icon-instagram {
     background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     color: #ffffff;
+    transform: scale(1.06);
 }
 
 .contato-item:hover .contato-icon-whatsapp {
     background: #25d366;
     color: #ffffff;
+    transform: scale(1.06);
 }
 
 /* Formulário de Contato */
@@ -1121,11 +1153,6 @@ body.has-hero-fullscreen .cabecalho-fixo.rolando {
     background-color: rgba(11, 19, 43, 0.95);
 }
 
-@media (max-width: 768px) {
-    .contato-container {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ============================================================
    Banner CTA (Call to Action)
