@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahu Moana | Início</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/KahuMoana.ico" type="image/x-icon">
+</head>
+
+<body class="has-hero-fullscreen">
+    <!-- Cabeçalho Fixo / Navegação Principal -->
+    <header class="cabecalho-fixo" id="cabecalho">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/BRANCO_LOGO.webp" alt="Logo Kahu Moana" class="logo-img">
+            </a>
+
+            <div class="nav-acoes">
+                <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="ativo">
+                                <i class="fa-solid fa-house"></i>
+                                <span data-i18n="menu_home">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="setubal-challenge.html">
+                                <i class="fa-solid fa-trophy"></i>
+                                <span data-i18n="menu_setubal">Setúbal Challenge</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="participe.html">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span data-i18n="menu_participe">Participe</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Seletor no Menu Mobile -->
+                    <div class="seletor-idioma-mobile">
+                        <span class="seletor-idioma-mobile-label">
+                            <i class="fa-solid fa-globe"></i>
+                            <span data-i18n="seletor_idioma_label">Idioma / Language</span>
+                        </span>
+                        <div class="seletor-idioma" role="group" aria-label="Idioma">
+                            <button type="button" class="btn-idioma ativo" data-lang="pt" title="Português">PT</button>
+                            <button type="button" class="btn-idioma" data-lang="en" title="English">EN</button>
+                            <button type="button" class="btn-idioma" data-lang="fr" title="Français">FR</button>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Seletor Desktop -->
+                <div class="seletor-idioma seletor-idioma-desktop" id="seletor-idioma-desktop" role="group" aria-label="Selecionar idioma">
+                    <button type="button" class="btn-idioma ativo" data-lang="pt" title="Português">PT</button>
+                    <button type="button" class="btn-idioma" data-lang="en" title="English">EN</button>
+                    <button type="button" class="btn-idioma" data-lang="fr" title="Français">FR</button>
+                </div>
+
+                <button class="btn-mobile" id="btn-mobile" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </header>
+
+    <!-- Seção Hero com Vídeo em Tela Cheia (100% Largura e 100% Altura) -->
+    <section class="hero hero-fullscreen" id="inicio">
+        <!-- Vídeo de Fundo com Fallback e Poster -->
+        <div class="hero-video-container">
+            <video class="hero-video" id="video-destaque" autoplay muted loop playsinline
+                poster="assets/hero-poster.jpg" preload="auto">
+                <source src="assets/video_hero.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+            <div class="hero-video-grid-pattern"></div>
+        </div>
+
+        <!-- Conteúdo Central do Hero -->
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <i class="fa-solid fa-water"></i>
+                <span data-i18n="hero_badge">Kahu Moana em Setúbal, Portugal</span>
+            </div>
+
+            <h1 class="hero-title" data-i18n-html="hero_title">
+                🛶 KAHU MOANA <span class="gradient-text">VA’A Clube de Setúbal</span>
+            </h1>
+
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+                Aulas · Passeios · Eventos · Team Building
+            </p>
+
+            <div class="hero-actions">
+                <a href="setubal-challenge.html" class="btn btn-primary">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span data-i18n="btn_conheca">Setúbal Challenge</span>
+                </a>
+                <a href="participe.html" class="btn btn-secondary">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span data-i18n="btn_fale_conosco">Participe Agora</span>
+                </a>
+            </div>
+
+            <!-- Faixa de Destaques Rápidos -->
+            <div class="hero-stats-strip">
+                <div class="hero-stat-item">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                    <div class="stat-text">
+                        <strong data-i18n="hero_stat_perf_title">Arrábida</strong>
+                        <span data-i18n="hero_stat_perf_desc">Passeios & Treinos</span>
+                    </div>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat-item">
+                    <i class="fa-solid fa-users"></i>
+                    <div class="stat-text">
+                        <strong data-i18n="hero_stat_resp_title">Para Todos</strong>
+                        <span data-i18n="hero_stat_resp_desc">Aulas & Eventos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles Flutuantes do Vídeo -->
+        <div class="hero-video-controls">
+            <button type="button" class="btn-video-control" id="btn-toggle-video" data-i18n-aria="btn_video_pause"
+                data-i18n-title="btn_video_pause" title="Pausar vídeo" aria-label="Pausar vídeo">
+                <i class="fa-solid fa-pause"></i>
+            </button>
+            <button type="button" class="btn-video-control" id="btn-toggle-som" data-i18n-aria="btn_audio_unmute"
+                data-i18n-title="btn_audio_unmute" title="Ativar som" aria-label="Ativar som">
+                <i class="fa-solid fa-volume-xmark"></i>
+            </button>
+            <span class="video-status-tag">
+                <i class="fa-solid fa-circle"></i>
+                <span>HD 60FPS</span>
+            </span>
+        </div>
+
+        <!-- Indicador Animado de Rolagem -->
+        <a href="#diferenciais" class="hero-scroll-btn" data-i18n-aria="scroll_explore"
+            aria-label="Rolar para a seção de diferenciais">
+            <span class="scroll-mouse">
+                <span class="scroll-wheel"></span>
+            </span>
+            <span class="scroll-text" data-i18n="scroll_explore">Explorar</span>
+        </a>
+    </section>
+
+    <!-- Conteúdo Principal após o Hero -->
+    <main class="conteudo-principal">
+
+        <!-- Seção de Experiências / Diferenciais -->
+        <section class="secao" id="diferenciais">
+            <div class="secao-header">
+                <h2 data-i18n-html="diferenciais_titulo">Nossas <span>Experiências</span></h2>
+                <p data-i18n="diferenciais_subtitulo">Conecte-se com o mar, desenvolva o espírito de equipa e viva momentos únicos na baía de Setúbal e Arrábida.</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3 data-i18n="dif_card1_title">Aulas de Canoa Va'a</h3>
+                    <p data-i18n="dif_card1_desc">Treinos regulares para todas as idades e níveis, focados na técnica da remada polinésia, bem-estar e segurança no mar.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h3 data-i18n="dif_card2_title">Passeios & Expedições</h3>
+                    <p data-i18n="dif_card2_desc">Explore as águas calmas e cristalinas do Parque Natural da Arrábida e a foz do Rio Sado de uma perspectiva inesquecível.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 data-i18n="dif_card3_title">Team Building & Eventos</h3>
+                    <p data-i18n="dif_card3_desc">Atividades exclusivas para empresas e grupos, fortalecendo a união, liderança e sincronia através da canoa polinésia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner de Chamada para Ação -->
+        <div class="cta-banner">
+            <h3 data-i18n="cta_index_title">Pronto para remar com a Kahu Moana?</h3>
+            <p data-i18n="cta_index_desc">Reserve a sua aula experimental, marque um passeio ou participe no Setúbal Challenge.</p>
+            <a href="participe.html" class="btn btn-primary">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span data-i18n="cta_index_btn">Quero Participar</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-container">
+            <div class="rodape-sociais">
+                <a href="https://instagram.com/kahumoana" target="_blank" rel="noopener noreferrer"
+                    class="btn-social social-instagram" data-i18n-aria="social_instagram_aria"
+                    data-i18n-title="info_instagram_title" title="Instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=351911872833&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20e%20marcar%20uma%20aula%20experiemental!" target="_blank" rel="noopener noreferrer"
+                    class="btn-social social-whatsapp" data-i18n-aria="social_whatsapp_aria"
+                    data-i18n-title="info_whatsapp_title" title="WhatsApp" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <p data-i18n-html="rodape_texto">&copy; 2026 <span>Kahu Moana</span>. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

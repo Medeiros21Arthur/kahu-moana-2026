@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahu Moana | Setúbal Challenge</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/KahuMoana.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Cabeçalho Fixo / Navegação Principal -->
+    <header class="cabecalho-fixo" id="cabecalho">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/BRANCO_LOGO.webp" alt="Logo Kahu Moana" class="logo-img">
+            </a>
+
+            <div class="nav-acoes">
+                <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa-solid fa-house"></i>
+                                <span data-i18n="menu_home">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="setubal-challenge.html" class="ativo">
+                                <i class="fa-solid fa-trophy"></i>
+                                <span data-i18n="menu_setubal">Setúbal Challenge</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="participe.html">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span data-i18n="menu_participe">Participe</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Seletor no Menu Mobile -->
+                    <div class="seletor-idioma-mobile">
+                        <span class="seletor-idioma-mobile-label">
+                            <i class="fa-solid fa-globe"></i>
+                            <span data-i18n="seletor_idioma_label">Idioma / Language</span>
+                        </span>
+                        <div class="seletor-idioma" role="group" aria-label="Idioma">
+                            <button type="button" class="btn-idioma ativo" data-lang="pt" title="Português">PT</button>
+                            <button type="button" class="btn-idioma" data-lang="en" title="English">EN</button>
+                            <button type="button" class="btn-idioma" data-lang="fr" title="Français">FR</button>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Seletor Desktop -->
+                <div class="seletor-idioma seletor-idioma-desktop" id="seletor-idioma-desktop" role="group"
+                    aria-label="Selecionar idioma">
+                    <button type="button" class="btn-idioma ativo" data-lang="pt" title="Português">PT</button>
+                    <button type="button" class="btn-idioma" data-lang="en" title="English">EN</button>
+                    <button type="button" class="btn-idioma" data-lang="fr" title="Français">FR</button>
+                </div>
+
+                <button class="btn-mobile" id="btn-mobile" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </header>
+
+    <main class="conteudo-principal">
+        <!-- Hero da Página Setúbal Challenge -->
+        <section class="hero">
+            <div class="hero-badge">
+                <i class="fa-solid fa-trophy"></i>
+                <span data-i18n="setubal_badge"> 3ª Taça Moana</span>
+            </div>
+            <h1 data-i18n-html="setubal_title">SETÚBAL <span>CHALLENGE</span></h1>
+            <div class="hero-subtitle-highlight" data-i18n="setubal_subtitle">16 KM DE PURA EMOÇÃO</div>
+        </section>
+
+        <!-- Seção Narrativa, Cenários e Classificações -->
+        <section class="secao">
+            <div class="intro-challenge-card">
+                <p data-i18n="setubal_intro_p1">
+                    O evento que fechou com chave de ouro a Taça Moana! Reunimos remadores de todo o país num percurso
+                    épico de 16km passando pela Arrábida.
+                </p>
+                <p data-i18n="setubal_intro_p2">
+                    Mais do que uma competição, foi um encontro de paixão pelo Va’a, superação e conexão com a natureza
+                    num dos lugares mais bonitos de Portugal.
+                </p>
+            </div>
+
+            <!-- Cenários Destaque -->
+            <div class="cenarios-grid">
+                <div class="cenario-card">
+                    <div class="cenario-icone">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <div class="cenario-texto">
+                        <h4 data-i18n="cenario_sado_title">Rio Sado</h4>
+                        <span data-i18n="cenario_sado_desc">Cenário Paradisíaco</span>
+                    </div>
+                </div>
+
+                <div class="cenario-card">
+                    <div class="cenario-icone">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                    </div>
+                    <div class="cenario-texto">
+                        <h4 data-i18n="cenario_arrabida_title">Arrábida</h4>
+                        <span data-i18n="cenario_arrabida_desc">Serra Majestosa</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela de Classificações (Leaderboard) -->
+            <div class="classificacoes-box" id="classificacoes">
+                <div class="classificacoes-header">
+                    <h3 data-i18n-html="classificacoes_title"><i class="fa-solid fa-trophy"></i> CLASSIFICAÇÕES</h3>
+                    <div class="tab-ano-container" role="tablist" aria-label="Ano da classificação">
+                        <button type="button" class="tab-btn ativo" data-tab-ano="2026" id="tab-2026" role="tab"
+                            aria-selected="true" aria-controls="painel-classificacao-2026"
+                            data-i18n="tab_2026">2026</button>
+                        <button type="button" class="tab-btn" data-tab-ano="2025" id="tab-2025" role="tab"
+                            aria-selected="false" aria-controls="painel-classificacao-2025"
+                            data-i18n="tab_2025">2025</button>
+                        <button type="button" class="tab-btn" data-tab-ano="2024" id="tab-2024" role="tab"
+                            aria-selected="false" aria-controls="painel-classificacao-2024"
+                            data-i18n="tab_2024">2024</button>
+                    </div>
+                </div>
+
+                <div class="classificacoes-conteudos">
+                    <!-- PAINEL 2026 -->
+                    <div class="painel-ano ativo" id="painel-classificacao-2026" role="tabpanel"
+                        aria-labelledby="tab-2026">
+                        <!-- Filtro de Categorias / Dias em 2026 -->
+                        <div class="filtros-categoria-wrapper">
+                            <span class="filtros-label"><i class="fa-solid fa-filter"></i> <span
+                                    data-i18n="filtro_label">Filtrar Categoria:</span></span>
+                            <div class="categoria-filtros" role="group" aria-label="Filtro de Categorias 2026">
+                                <button type="button" class="cat-filtro-btn ativo" data-filtro="todos"
+                                    data-i18n="filtro_todos">Todas as Categorias</button>
+                                <button type="button" class="cat-filtro-btn" data-filtro="masculino-16k"
+                                    data-i18n="filtro_masculino_16k">Masculino 16 KM (23/05)</button>
+                                <button type="button" class="cat-filtro-btn" data-filtro="feminino-8k"
+                                    data-i18n="filtro_feminino_8k">Feminino 8 KM (23/05)</button>
+                                <button type="button" class="cat-filtro-btn" data-filtro="mista-16k"
+                                    data-i18n="filtro_mista_16k">Mista 16 KM (24/05)</button>
+                            </div>
+                        </div>
+
+                        <div class="categorias-grid-container">
+                            <!-- BLOCO 1: SÁBADO 23/05/2026 -->
+                            <div class="bloco-dia" data-dia="23-05">
+                                <div class="dia-header">
+                                    <div class="dia-badge">
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        <span data-i18n="dia_23_05_header">Sábado • 23 de Maio de 2026</span>
+                                    </div>
+                                </div>
+
+                                <div class="categorias-cards-lista">
+                                    <!-- Categoria Masculino 16 KM -->
+                                    <div class="categoria-card" data-categoria="masculino-16k">
+                                        <div class="categoria-card-header">
+                                            <div class="categoria-card-titulo">
+                                                <i class="fa-solid fa-person-swimming"></i>
+                                                <h4 data-i18n="cat_masculino_16k_title">RESULTADO MASCULINO 16 KM</h4>
+                                            </div>
+                                            <span class="categoria-badge badge-16k">16 KM • 23/05/2026</span>
+                                        </div>
+
+                                        <div class="tabela-wrapper">
+                                            <table class="tabela-classificacao">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 80px;" data-i18n="tabela_col_pos">POS</th>
+                                                        <th data-i18n="tabela_col_equipa">EQUIPA</th>
+                                                        <th style="width: 180px; text-align: right;"
+                                                            data-i18n="tabela_col_tempo">TEMPO OFICIAL</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="pos-badge pos-1">1</span></td>
+                                                        <td><span class="equipa-nome">BARCELONA VA’A</span></td>
+                                                        <td style="text-align: right;"><span
+                                                                class="tempo-tag">1:23:09</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="pos-badge pos-2">2</span></td>
+                                                        <td><span class="equipa-nome">CNOCA VA’A</span></td>
+                                                        <td style="text-align: right;"><span
+                                                                class="tempo-tag">1:24:18</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="pos-badge pos-3">3</span></td>
+                                                        <td><span class="equipa-nome destaque-kahu">KAHU MOANA
+                                                                VA’A</span></td>
+                                                        <td style="text-align: right;"><span
+                                                                class="tempo-tag">1:36:27</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <!-- Categoria Feminino 8 KM -->
+                                    <div class="categoria-card" data-categoria="feminino-8k">
+                                        <div class="categoria-card-header">
+                                            <div class="categoria-card-titulo">
+                                                <i class="fa-solid fa-person-dress"></i>
+                                                <h4 data-i18n="cat_feminino_8k_title">RESULTADO FEMININO 8 KM</h4>
+                                            </div>
+                                            <span class="categoria-badge badge-8k">8 KM • 23/05/2026</span>
+                                        </div>
+
+                                        <div class="tabela-wrapper">
+                                            <table class="tabela-classificacao">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 80px;" data-i18n="tabela_col_pos">POS</th>
+                                                        <th data-i18n="tabela_col_equipa">EQUIPA</th>
+                                                        <th style="width: 180px; text-align: right;"
+                                                            data-i18n="tabela_col_tempo">TEMPO OFICIAL</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="pos-badge pos-1">1</span></td>
+                                                        <td><span class="equipa-nome destaque-kahu">KAHU MOANA</span>
+                                                        </td>
+                                                        <td style="text-align: right;"><span
+                                                                class="tempo-tag">1:07:00</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="pos-badge pos-2">2</span></td>
+                                                        <td><span class="equipa-nome">CNOCA VA’A</span></td>
+                                                        <td style="text-align: right;"><span
+                                                                class="tempo-tag">1:10:01</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BLOCO 2: DOMINGO 24/05/2026 -->
+                            <div class="bloco-dia" data-dia="24-05">
+                                <div class="dia-header">
+                                    <div class="dia-badge">
+                                        <i class="fa-regular fa-calendar-days"></i>
+                                        <span data-i18n="dia_24_05_header">Domingo • 24 de Maio de 2026</span>
+                                    </div>
+                                </div>
+
+                                <div class="categorias-cards-lista">
+                                    <!-- Categoria Mista 16 KM -->
+                                    <div class="categoria-card" data-categoria="mista-16k">
+                                        <div class="categoria-card-header">
+                                            <div class="categoria-card-titulo">
+                                                <i class="fa-solid fa-people-group"></i>
+                                                <h4 data-i18n="cat_mista_16k_title">RESULTADO MISTA 16 KM</h4>
+                                            </div>
+                                            <span class="categoria-badge badge-16k">16 KM • 24/05/2026</span>
+                                        </div>
+
+                                        <div class="tabela-wrapper">
+                                            <table class="tabela-classificacao">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 80px;" data-i18n="tabela_col_pos">POS</th>
+                                                        <th data-i18n="tabela_col_equipa">EQUIPA</th>
+                                                        <th style="width: 180px; text-align: right;"
+                                                            data-i18n="tabela_col_tempo">TEMPO OFICIAL</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="pos-badge pos-1">1</span></td>
+                                                        <td><span class="equipa-nome">AUKAI VA’A</span></td>
+                                                        <td style="text-align: right;"><span
+                                                                class="tempo-tag">1:26:56</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="pos-badge pos-2">2</span></td>
+                                                        <td><span class="equipa-nome">CNOCA VA’A</span></td>
+                                                        <td style="text-align: right;"><span
+                                                                class="tempo-tag">1:30:33</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="pos-badge pos-3">3</span></td>
+                                                        <td><span class="equipa-nome">KEALOHA VA’A & LISBOA VA’A</span>
+                                                        </td>
+                                                        <td style="text-align: right;"><span
+                                                                class="tempo-tag">1:33:23</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="pos-badge">4</span></td>
+                                                        <td><span class="equipa-nome destaque-kahu">KAHU MOANA
+                                                                VA’A</span></td>
+                                                        <td style="text-align: right;"><span
+                                                                class="tempo-tag">1:33:48</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="pos-badge">5</span></td>
+                                                        <td><span class="equipa-nome destaque-kahu">KAHU MOANA
+                                                                VA’A</span></td>
+                                                        <td style="text-align: right;"><span
+                                                                class="tempo-tag">1:41:29</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PAINEL 2025 -->
+                    <div class="painel-ano" id="painel-classificacao-2025" role="tabpanel" aria-labelledby="tab-2025"
+                        style="display: none;">
+                        <div class="categoria-card">
+                            <div class="categoria-card-header">
+                                <div class="categoria-card-titulo">
+                                    <i class="fa-solid fa-trophy"></i>
+                                    <h4 data-i18n="cat_geral_2025_title">CLASSIFICAÇÃO GERAL 16 KM</h4>
+                                </div>
+                                <span class="categoria-badge badge-16k">16 KM • 2025</span>
+                            </div>
+                            <div class="tabela-wrapper">
+                                <table class="tabela-classificacao" id="tabela-classificacao-2025">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 80px;" data-i18n="tabela_col_pos">POS</th>
+                                            <th data-i18n="tabela_col_equipa">EQUIPA</th>
+                                            <th style="width: 180px; text-align: right;" data-i18n="tabela_col_tempo">
+                                                TEMPO OFICIAL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="pos-badge pos-1">1</span></td>
+                                            <td><span class="equipa-nome">AUKAI CANOE CLUBE</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:29:49,51</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge pos-2">2</span></td>
+                                            <td><span class="equipa-nome destaque-kahu">KAHU MOANA VA'A</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:35:22,82</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge pos-3">3</span></td>
+                                            <td><span class="equipa-nome">LISBOA VA'A</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:37:57,97</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge">4</span></td>
+                                            <td><span class="equipa-nome">KEALOHA VA'A</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:38:26,58</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge">5</span></td>
+                                            <td><span class="equipa-nome">KAHUNA VA'A</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:38:33,90</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge">6</span></td>
+                                            <td><span class="equipa-nome">DOURO VA'A</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:38:58.68</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge">7</span></td>
+                                            <td><span class="equipa-nome">CNOCA VA'A</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:41:21,55</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge">8</span></td>
+                                            <td><span class="equipa-nome">KAHUNA VA'A 2</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:48:45,22</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge">9</span></td>
+                                            <td><span class="equipa-nome destaque-kahu">KAHU MOANA VA'A 3</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:50:45,61</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge">10</span></td>
+                                            <td><span class="equipa-nome">DOURO VA'A 2</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:51:38,37</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge">11</span></td>
+                                            <td><span class="equipa-nome destaque-kahu">KAHU MOANA VA'A 2</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:52:58,48</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PAINEL 2024 -->
+                    <div class="painel-ano" id="painel-classificacao-2024" role="tabpanel" aria-labelledby="tab-2024"
+                        style="display: none;">
+                        <div class="categoria-card">
+                            <div class="categoria-card-header">
+                                <div class="categoria-card-titulo">
+                                    <i class="fa-solid fa-trophy"></i>
+                                    <h4 data-i18n="cat_geral_2024_title">CLASSIFICAÇÃO GERAL 16 KM</h4>
+                                </div>
+                                <span class="categoria-badge badge-16k">16 KM • 2024</span>
+                            </div>
+                            <div class="tabela-wrapper">
+                                <table class="tabela-classificacao" id="tabela-classificacao-2024">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 80px;" data-i18n="tabela_col_pos">POS</th>
+                                            <th data-i18n="tabela_col_equipa">EQUIPA</th>
+                                            <th style="width: 180px; text-align: right;" data-i18n="tabela_col_tempo">
+                                                TEMPO OFICIAL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="pos-badge pos-1">1</span></td>
+                                            <td><span class="equipa-nome">AUKAI CANOE CLUBE</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:31:12,10</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge pos-2">2</span></td>
+                                            <td><span class="equipa-nome destaque-kahu">KAHU MOANA VA'A</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:36:45,30</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge pos-3">3</span></td>
+                                            <td><span class="equipa-nome">LISBOA VA'A</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:39:10,05</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge">4</span></td>
+                                            <td><span class="equipa-nome">KEALOHA VA'A</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:40:22,80</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="pos-badge">5</span></td>
+                                            <td><span class="equipa-nome">DOURO VA'A</span></td>
+                                            <td style="text-align: right;"><span class="tempo-tag">1:42:15,40</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção Parcerias & Agradecimentos -->
+            <div class="secao-parceiros" style="margin-top: 56px;">
+                <div class="secao-parceiros-header">
+                    <h3 data-i18n="parceiros_title">OBRIGADO PELA PARCERIA!</h3>
+                </div>
+
+                <div class="parceiros-grid">
+                    <div class="parceiro-card">
+                        <div class="parceiro-header">
+                            <div class="parceiro-icone">
+                                <i class="fa-solid fa-sailboat"></i>
+                            </div>
+                            <h4 data-i18n="parceiro1_title">Clube de Canoagem de Setúbal</h4>
+                        </div>
+                        <p data-i18n="parceiro1_desc">
+                            Pela parceria incondicional e por todo o suporte prestado ao longo de todo o evento. Vocês
+                            são fundamentais!
+                        </p>
+                    </div>
+
+                    <div class="parceiro-card">
+                        <div class="parceiro-header">
+                            <div class="parceiro-icone">
+                                <i class="fa-solid fa-landmark"></i>
+                            </div>
+                            <h4 data-i18n="parceiro2_title">Câmara Municipal de Setúbal</h4>
+                        </div>
+                        <p data-i18n="parceiro2_desc">
+                            Pelo apoio constante e presença do Vereador Dr. Pedro Pina, reforçando o valor do desporto
+                            no Rio Sado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner de Chamada para Ação -->
+        <div class="cta-banner">
+            <h3 data-i18n="cta_setubal_title">Pronto para o próximo desafio?</h3>
+            <p data-i18n="cta_setubal_desc">Garanta a sua vaga nos treinos ou participe nas próximas edições do Setúbal
+                Challenge.</p>
+            <a href="participe.html" class="btn btn-primary">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span data-i18n="cta_setubal_btn">Fazer Minha Inscrição</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-container">
+            <div class="rodape-sociais">
+                <a href="https://instagram.com/kahumoana" target="_blank" rel="noopener noreferrer"
+                    class="btn-social social-instagram" data-i18n-aria="social_instagram_aria"
+                    data-i18n-title="info_instagram_title" title="Instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=351911872833&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos%20e%20marcar%20uma%20aula%20experiemental!" target="_blank" rel="noopener noreferrer"
+                    class="btn-social social-whatsapp" data-i18n-aria="social_whatsapp_aria"
+                    data-i18n-title="info_whatsapp_title" title="WhatsApp" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+            <p data-i18n-html="rodape_texto">&copy; 2026 <span>Kahu Moana VA'A</span>. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

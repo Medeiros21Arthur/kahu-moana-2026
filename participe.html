@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahu Moana | Participe</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/KahuMoana.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Cabeçalho Fixo / Navegação Principal -->
+    <header class="cabecalho-fixo" id="cabecalho">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/BRANCO_LOGO.webp" alt="Logo Kahu Moana" class="logo-img">
+            </a>
+
+            <div class="nav-acoes">
+                <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <i class="fa-solid fa-house"></i>
+                                <span data-i18n="menu_home">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="setubal-challenge.html">
+                                <i class="fa-solid fa-trophy"></i>
+                                <span data-i18n="menu_setubal">Setúbal Challenge</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="participe.html" class="ativo">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span data-i18n="menu_participe">Participe</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Seletor no Menu Mobile -->
+                    <div class="seletor-idioma-mobile">
+                        <span class="seletor-idioma-mobile-label">
+                            <i class="fa-solid fa-globe"></i>
+                            <span data-i18n="seletor_idioma_label">Idioma / Language</span>
+                        </span>
+                        <div class="seletor-idioma" role="group" aria-label="Idioma">
+                            <button type="button" class="btn-idioma ativo" data-lang="pt" title="Português">PT</button>
+                            <button type="button" class="btn-idioma" data-lang="en" title="English">EN</button>
+                            <button type="button" class="btn-idioma" data-lang="fr" title="Français">FR</button>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Seletor Desktop -->
+                <div class="seletor-idioma seletor-idioma-desktop" id="seletor-idioma-desktop" role="group" aria-label="Selecionar idioma">
+                    <button type="button" class="btn-idioma ativo" data-lang="pt" title="Português">PT</button>
+                    <button type="button" class="btn-idioma" data-lang="en" title="English">EN</button>
+                    <button type="button" class="btn-idioma" data-lang="fr" title="Français">FR</button>
+                </div>
+
+                <button class="btn-mobile" id="btn-mobile" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="nav-overlay" id="nav-overlay"></div>
+    </header>
+
+    <main class="conteudo-principal">
+        <!-- Hero da Página Participe -->
+        <section class="hero">
+            <div class="hero-badge">
+                <i class="fa-solid fa-trophy"></i>
+                <span data-i18n="participe_badge">Aulas, Passeios & Eventos</span>
+            </div>
+            <h1 data-i18n-html="participe_title">Junte-se à <span>Kahu Moana</span></h1>
+            <p data-i18n="participe_subtitle">Treinos regulares de Canoa Va'a em Setúbal. Consulte os horários, escolha o seu plano e faça a sua inscrição online.</p>
+        </section>
+
+        <!-- Seção 1: Horários dos Treinos -->
+        <section class="secao" id="horarios">
+            <div class="secao-header">
+                <h2 data-i18n-html="horarios_titulo">Horários dos <span>Treinos</span></h2>
+                <p data-i18n="horarios_subtitulo">Treinos regulares na baía de Setúbal. Remadas ao nascer do sol, ao pôr do sol e aos fins de semana.</p>
+            </div>
+
+            <div class="horarios-grid">
+                <!-- Segunda -->
+                <div class="horario-card">
+                    <div class="horario-icone">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <span class="horario-dia" data-i18n="dia_segunda">Segunda-feira</span>
+                    <span class="horario-hora">06:00</span>
+                    <span class="horario-tag" data-i18n="tag_manha">Nascer do Sol</span>
+                </div>
+
+                <!-- Terça -->
+                <div class="horario-card">
+                    <div class="horario-icone">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+                    <span class="horario-dia" data-i18n="dia_terca">Terça-feira</span>
+                    <span class="horario-hora">18:00</span>
+                    <span class="horario-tag" data-i18n="tag_tarde">Pôr do Sol</span>
+                </div>
+
+                <!-- Quarta -->
+                <div class="horario-card">
+                    <div class="horario-icone">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <span class="horario-dia" data-i18n="dia_quarta">Quarta-feira</span>
+                    <span class="horario-hora">06:00</span>
+                    <span class="horario-tag" data-i18n="tag_manha">Nascer do Sol</span>
+                </div>
+
+                <!-- Quinta -->
+                <div class="horario-card">
+                    <div class="horario-icone">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+                    <span class="horario-dia" data-i18n="dia_quinta">Quinta-feira</span>
+                    <span class="horario-hora">18:00</span>
+                    <span class="horario-tag" data-i18n="tag_tarde">Pôr do Sol</span>
+                </div>
+
+                <!-- Sexta -->
+                <div class="horario-card">
+                    <div class="horario-icone">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <span class="horario-dia" data-i18n="dia_sexta">Sexta-feira</span>
+                    <span class="horario-hora">06:00</span>
+                    <span class="horario-tag" data-i18n="tag_manha">Nascer do Sol</span>
+                </div>
+
+                <!-- Sábado -->
+                <div class="horario-card">
+                    <div class="horario-icone">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <span class="horario-dia" data-i18n="dia_sabado">Sábado</span>
+                    <span class="horario-hora">10:00</span>
+                    <span class="horario-tag" data-i18n="tag_fimdesemana">Manhã</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Planos e Mensalidades -->
+        <section class="secao" id="planos">
+            <div class="secao-header">
+                <h2 data-i18n-html="planos_titulo">Nossos <span>Planos & Mensalidades</span></h2>
+                <p data-i18n="planos_subtitulo">Escolha a frequência ideal para a sua rotina e venha remar com a Kahu Moana.</p>
+            </div>
+
+            <div class="planos-grid">
+                <!-- Plano 1x Semana -->
+                <div class="plano-card">
+                    <div class="plano-header">
+                        <h3 class="plano-titulo" data-i18n="plano1_titulo">1x por Semana</h3>
+                        <div class="plano-preco-box">
+                            <span class="plano-valor" data-i18n="plano1_preco">40</span>
+                            <span class="plano-periodo" data-i18n="plano1_periodo">€ / mês</span>
+                        </div>
+                        <p class="plano-desc" data-i18n="plano1_desc">Ideal para quem está a começar ou quer uma rotina leve.</p>
+                    </div>
+
+                    <ul class="plano-features">
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano1_f1">1 treino semanal guiado</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano1_f2">Equipamento completo (canoa, remo e colete)</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano1_f3">Acompanhamento com instrutor qualificado</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano1_f4">Participação nas atividades do clube</span></li>
+                    </ul>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvpRsFs1Z6s0VMp0QuLsmFou50IIJg0B9sUQ5NzL-5zIdIZQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-plano">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span data-i18n="btn_escolher_plano">Inscrever-se no Formulário</span>
+                    </a>
+                </div>
+
+                <!-- Plano 2x Semana (Destaque) -->
+                <div class="plano-card destaque">
+                    <span class="plano-badge-topo" data-i18n="plano2_badge">Mais Popular</span>
+                    <div class="plano-header">
+                        <h3 class="plano-titulo" data-i18n="plano2_titulo">2x por Semana</h3>
+                        <div class="plano-preco-box">
+                            <span class="plano-valor" data-i18n="plano2_preco">50</span>
+                            <span class="plano-periodo" data-i18n="plano2_periodo">€ / mês</span>
+                        </div>
+                        <p class="plano-desc" data-i18n="plano2_desc">O equilíbrio perfeito entre evolução técnica e condicionamento físico.</p>
+                    </div>
+
+                    <ul class="plano-features">
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano2_f1">2 treinos semanais à escolha</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano2_f2">Equipamento completo incluído</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano2_f3">Evolução técnica contínua e resistência</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano2_f4">Acesso prioritário a passeios e eventos</span></li>
+                    </ul>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvpRsFs1Z6s0VMp0QuLsmFou50IIJg0B9sUQ5NzL-5zIdIZQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-plano">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span data-i18n="btn_escolher_plano">Inscrever-se no Formulário</span>
+                    </a>
+                </div>
+
+                <!-- Plano 3x Semana -->
+                <div class="plano-card">
+                    <div class="plano-header">
+                        <h3 class="plano-titulo" data-i18n="plano3_titulo">3x por Semana</h3>
+                        <div class="plano-preco-box">
+                            <span class="plano-valor" data-i18n="plano3_preco">60</span>
+                            <span class="plano-periodo" data-i18n="plano3_periodo">€ / mês</span>
+                        </div>
+                        <p class="plano-desc" data-i18n="plano3_desc">Para quem busca alto rendimento, evolução acelerada e imersão no mar.</p>
+                    </div>
+
+                    <ul class="plano-features">
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano3_f1">3 treinos semanais à escolha</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano3_f2">Equipamento completo incluído</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano3_f3">Preparação física e técnica avançada</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span data-i18n="plano3_f4">Preparação para o Setúbal Challenge e regatas</span></li>
+                    </ul>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvpRsFs1Z6s0VMp0QuLsmFou50IIJg0B9sUQ5NzL-5zIdIZQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-plano">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span data-i18n="btn_escolher_plano">Inscrever-se no Formulário</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Card Destaque Google Forms -->
+        <div class="google-form-card">
+            <div class="form-icone">
+                <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+            <h3 data-i18n="gform_titulo">Inscrição Oficial Online</h3>
+            <p data-i18n="gform_desc">Preencha o formulário oficial de inscrição do Kahu Moana Va'a Clube para garantir a sua vaga e iniciar as suas remadas.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvpRsFs1Z6s0VMp0QuLsmFou50IIJg0B9sUQ5NzL-5zIdIZQ/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-google"></i>
+                <span data-i18n="gform_btn">Abrir Formulário de Inscrição (Google Forms)</span>
+            </a>
+        </div>
+
+        <!-- Seção 4: Canais de Contato & Dúvidas Rápidas -->
+        <section class="secao" id="contato-direto">
+            <div class="secao-header">
+                <h2 data-i18n-html="contato_duvidas_titulo">Fale Connosco / <span>Dúvidas</span></h2>
+                <p data-i18n="contato_duvidas_subtitulo">Dúvidas sobre os planos, agendamento de passeios ou Team Building? Fale diretamente connosco.</p>
+            </div>
+
+            <div class="contato-container">
+                <!-- Informações e Canais de Contato -->
+                <div class="contato-info">
+                    <a href="https://instagram.com/kahumoana" target="_blank" rel="noopener noreferrer" class="contato-item">
+                        <div class="contato-item-icon contato-icon-instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div>
+                            <h4 data-i18n="info_instagram_title">Instagram</h4>
+                            <p data-i18n="info_instagram_desc">@kahumoana</p>
+                        </div>
+                    </a>
+
+                    <a href="mailto:contato@kahumoana.com" class="contato-item">
+                        <div class="contato-item-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 data-i18n="info_email_title">E-mail</h4>
+                            <p data-i18n="info_email_desc">contato@kahumoana.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="contato-item">
+                        <div class="contato-item-icon contato-icon-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4 data-i18n="info_whatsapp_title">WhatsApp</h4>
+                            <p data-i18n="info_whatsapp_desc">+55 (00) 00000-0000</p>
+                        </div>
+                    </a>
+
+                    <div class="contato-item">
+                        <div class="contato-item-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 data-i18n="info_local_title">Localização</h4>
+                            <p data-i18n="info_local_desc">Setúbal, Portugal - Baía de Setúbal & Arrábida</p>
+                        </div>
+                    </div>
+
+                    <div class="contato-item">
+                        <div class="contato-item-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 data-i18n="info_horario_title">Horário de Atendimento</h4>
+                            <p data-i18n="info_horario_desc">Segunda a Domingo (mediante agendamento)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Dúvidas / Mensagem -->
+                <form class="form-contato" id="form-contato">
+                    <div class="form-grupo">
+                        <label for="nome" data-i18n="form_nome_label">Nome Completo</label>
+                        <input type="text" id="nome" data-i18n-placeholder="form_nome_placeholder" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="email" data-i18n="form_email_label">E-mail de Contato</label>
+                        <input type="email" id="email" data-i18n-placeholder="form_email_placeholder" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="assunto" data-i18n="form_assunto_label">Como deseja participar?</label>
+                        <select id="assunto" required>
+                            <option value="" disabled selected data-i18n="form_opt_placeholder">Selecione uma opção...</option>
+                            <option value="plano_1x">Plano 1x por Semana (40 €/mês)</option>
+                            <option value="plano_2x">Plano 2x por Semana (50 €/mês)</option>
+                            <option value="plano_3x">Plano 3x por Semana (60 €/mês)</option>
+                            <option value="inscricao" data-i18n="form_opt_inscricao">Inscrição no Setúbal Challenge</option>
+                            <option value="aulas" data-i18n="form_opt_mentoria">Aulas de Canoa Va'a (Iniciante / Regular)</option>
+                            <option value="passeios" data-i18n="form_opt_duvida">Passeios Náuticos & Arrábida</option>
+                            <option value="teambuilding" data-i18n="form_opt_outro">Team Building para Empresas / Eventos</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="mensagem" data-i18n="form_mensagem_label">Sua Mensagem / Detalhes</label>
+                        <textarea id="mensagem" rows="5" data-i18n-placeholder="form_mensagem_placeholder" placeholder="Conte-nos sobre seu interesse, número de pessoas ou datas preferidas..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span data-i18n="form_btn_enviar">Enviar Mensagem</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-container">
+            <div class="rodape-sociais">
+                <a href="https://instagram.com/kahumoana" target="_blank" rel="noopener noreferrer" class="btn-social social-instagram" data-i18n-aria="social_instagram_aria" data-i18n-title="info_instagram_title" title="Instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="btn-social social-whatsapp" data-i18n-aria="social_whatsapp_aria" data-i18n-title="info_whatsapp_title" title="WhatsApp" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="mailto:contato@kahumoana.com" class="btn-social social-email" data-i18n-aria="social_email_aria" data-i18n-title="info_email_title" title="E-mail" aria-label="E-mail">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <p data-i18n-html="rodape_texto">&copy; 2026 <span>Kahu Moana</span>. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
